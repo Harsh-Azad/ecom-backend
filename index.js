@@ -14,8 +14,8 @@ const ordersRouter = require('./routes/Order');
 //middlewares
 
 server.use(cors({
+     exposedHeaders:['X-Total-Count']
     }))
-    //     exposedHeaders:['X-Total-Count']
 server.use(express.json()); // to parse req.body
 server.use('/products', productsRouter.router);
 server.use('/categories', categoriesRouter.router)
